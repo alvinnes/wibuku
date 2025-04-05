@@ -35,7 +35,7 @@ const Navbar = () => {
           <Link to="/">Wibuku</Link>
         </h3>
         <ul
-          className={`${isActiveBtn && "top-13.5 opacity-100"} absolute -top-200 left-0 -z-1 flex w-full flex-col bg-slate-800 py-4 text-slate-400 opacity-0 transition-all duration-1000`}
+          className={`${isActiveBtn && "top-13.5 opacity-100"} absolute -top-200 left-0 z-3 flex w-full flex-col bg-slate-800 py-4 text-slate-400 opacity-0 transition-all duration-1000`}
         >
           <NavigationItem text="Home" link="/" icon={<House size={25} />} />
           <NavigationItem
@@ -109,7 +109,7 @@ const FeaturesNavbar = (props: FeaturesNavbarProps) => {
   return (
     <div className="flex items-center gap-2">
       <div
-        className={`${isClicked && "left-1/2 opacity-100"} absolute top-14.5 -left-full flex w-11/12 -translate-x-1/2 rounded-md bg-slate-700 text-white opacity-0 transition-all duration-500 hover:ring-2 hover:ring-slate-400/50 sm:static sm:w-sm sm:opacity-100`}
+        className={`${isClicked && "left-1/2 opacity-100"} absolute top-15 -left-full flex w-11/12 -translate-x-1/2 rounded-md bg-slate-700 text-white opacity-0 transition-all duration-500 hover:ring-2 hover:ring-slate-400/50 sm:static sm:w-sm sm:opacity-100`}
       >
         <input
           type="text"

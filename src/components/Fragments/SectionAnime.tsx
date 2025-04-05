@@ -111,7 +111,7 @@ interface SectionAnimeProps {
 const SectionAnime = (props: SectionAnimeProps) => {
   const { animeOngoing, isLoading } = props;
   return (
-    <div className="mt-10 flex w-10/12 flex-col items-center">
+    <div className="mt-10 flex w-11/12 flex-col items-center">
       <div className="flex w-full justify-between sm:gap-0 gap-3">
         <h2 className="self-start text-2xl font-semibold text-white">
           Anime Ongoing
