@@ -93,7 +93,7 @@ const DetailAnimePage = () => {
           />
         </div>
         <div className="absolute top-0 left-1/2 z-3 flex w-full -translate-x-1/2 flex-col items-center justify-center gap-6 py-20 sm:w-10/12 sm:flex-row sm:py-30">
-          <div className="h-70 w-65 cursor-pointer overflow-hidden rounded-xl bg-slate-500 sm:h-70 sm:w-60">
+          <div className="h-85 w-65 cursor-pointer overflow-hidden rounded-xl bg-slate-500 sm:h-70 sm:w-60">
             <img
               src={detailAnime?.images.jpg.large_image_url}
               alt={detailAnime?.title}
@@ -166,7 +166,7 @@ interface DescriptionAnimeProps {
 const DescriptionAnime = (props: DescriptionAnimeProps) => {
   const { detailAnim } = props;
   return (
-    <div className="mt-85 sm:mt-0 flex w-11/12 flex-col sm:w-8/12">
+    <div className="mt-70 sm:mt-0 flex w-11/12 flex-col sm:w-8/12">
       <h2 className="mb-1 text-lg font-bold">Synopsis</h2>
       <p className="mt-2 mb-3 text-sm text-slate-200">{detailAnim?.synopsis}</p>
       <Hr />

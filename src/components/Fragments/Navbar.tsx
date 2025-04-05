@@ -109,7 +109,7 @@ const FeaturesNavbar = (props: FeaturesNavbarProps) => {
   return (
     <div className="flex items-center gap-2">
       <div
-        className={`${isClicked && "left-1/2 opacity-100"} absolute top-13 -left-full flex w-11/12 -translate-x-1/2 rounded-md bg-slate-700 text-white opacity-0 transition-all duration-500 hover:ring-2 hover:ring-slate-400/50 sm:static sm:w-sm sm:opacity-100`}
+        className={`${isClicked && "left-1/2 opacity-100"} absolute top-14.5 -left-full flex w-11/12 -translate-x-1/2 rounded-md bg-slate-700 text-white opacity-0 transition-all duration-500 hover:ring-2 hover:ring-slate-400/50 sm:static sm:w-sm sm:opacity-100`}
       >
         <input
           type="text"

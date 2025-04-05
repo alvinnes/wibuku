@@ -55,7 +55,7 @@ const DetailGenresPage = () => {
         >
           Loading...
         </p>
-        <div className="mt-10 mb-20 grid w-full grid-cols-[repeat(auto-fit,minmax(10rem,10rem))] place-content-center gap-8">
+        <div className="mt-10 mb-20 grid w-full grid-cols-2 sm:grid-cols-[repeat(auto-fit,minmax(10rem,10rem))] place-content-center gap-8">
           {detailAnime.map((anime) => (
             <CardAnime
               title={anime.title}
