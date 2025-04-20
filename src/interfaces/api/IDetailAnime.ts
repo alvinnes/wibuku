@@ -13,7 +13,7 @@ export interface DetailAnime {
   producers: Producers[];
   season: string;
   episodes: number;
-  malId?: number;
+  mal_id?: number;
   title_japanese?: string;
   genres: Genres[];
   favorites: string;

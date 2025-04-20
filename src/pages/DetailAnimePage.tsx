@@ -81,6 +81,19 @@ const DetailAnimePage = () => {
     };
     fetchEpisodeAnime();
   }, []);
+
+  const oldDatas = JSON.parse(localStorage.getItem("anime")!) || [];
+
+  const handleBookmark = () => {
+    const result = {
+      title: detailAnime?.title,
+      img: detailAnime?.images.jpg.large_image_url,
+      malId: detailAnime?.mal_id,
+    };
+    const newDatas: DataAnime[] = [...oldDatas, result];
+    console.log(newDatas)
+    // localStorage.setItem("anime", JSON.stringify(newDatas));
+  };
   return (
     <section className="w-full text-white">
       <Navbar />
@@ -104,14 +117,16 @@ const DetailAnimePage = () => {
             <h2 className="mb-1 text-2xl font-bold sm:text-3xl">
               {detailAnime?.title}
             </h2>
-            <h2 className="mb-3 text-lg sm:text-xl">{detailAnime?.title_japanese}</h2>
+            <h2 className="mb-3 text-lg sm:text-xl">
+              {detailAnime?.title_japanese}
+            </h2>
             <div className="flex items-center gap-4 text-sm">
               <button className="mb-3 cursor-pointer rounded-sm bg-slate-700 p-2">
                 <ShareNetwork size={20} weight="bold" />
               </button>
               <button
                 className="mb-3 flex cursor-pointer items-center gap-1 rounded-sm bg-slate-700 p-2"
-                onClick={() => alert("Cooming soon!")}
+                onClick={handleBookmark}
               >
                 <Bookmark size={20} weight="bold" /> Bookmark
               </button>
@@ -166,7 +181,7 @@ interface DescriptionAnimeProps {
 const DescriptionAnime = (props: DescriptionAnimeProps) => {
   const { detailAnim } = props;
   return (
-    <div className="mt-70 sm:mt-0 flex w-11/12 flex-col sm:w-8/12">
+    <div className="mt-70 flex w-11/12 flex-col sm:mt-0 sm:w-8/12">
       <h2 className="mb-1 text-lg font-bold">Synopsis</h2>
       <p className="mt-2 mb-3 text-sm text-slate-200">{detailAnim?.synopsis}</p>
       <Hr />
