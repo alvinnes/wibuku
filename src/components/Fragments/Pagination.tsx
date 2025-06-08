@@ -1,6 +1,6 @@
 import { ArrowArcLeft, ArrowArcRight } from "@phosphor-icons/react";
 import { Dispatch, SetStateAction } from "react";
-import { DataPagination } from "../../interfaces/models/IDataPagination";
+import { DataPagination } from "../../interfaces/IDataPagination";
 
 interface PaginationProps {
   page: number;

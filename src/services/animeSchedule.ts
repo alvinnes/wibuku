@@ -1,13 +1,20 @@
-import axios, { AxiosResponse } from "axios";
-import { DetailDataAnime } from "../interfaces/api/IDetailDataAnime";
+import axios from "axios";
+import { DetailDataAnime } from "../interfaces/IDetailDataAnime";
 
-export const schedulAnime = async (day: string | undefined) => {
+export const schedulAnime = async (
+  page: number,
+  id?: string | undefined,
+  name?: string | undefined,
+  day?: string | undefined,
+): Promise<{ data: DetailDataAnime[]; pagination: undefined }> => {
   try {
-    const response: AxiosResponse<{ data: DetailDataAnime[] }> =
-      await axios.get(`https://api.jikan.moe/v4/schedules?filter=${day}`);
-    return response.data.data;
+    const response = await axios.get(
+      `https://api.jikan.moe/v4/schedules?filter=${day}`,
+    );
+    console.log(page, name, id);
+    return { data: response.data.data, pagination: undefined };
   } catch (err) {
     console.log(err);
-    return []
+    return { data: [], pagination: undefined };
   }
 };

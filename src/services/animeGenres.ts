@@ -9,12 +9,12 @@ export const genresAnime = async () => {
   }
 };
 
-export const detailGenresAnime = async (id?: string, page?: number) => {
+export const detailGenresAnime = async (page?: number, id?: string) => {
   try {
     const response = await axios.get(
       `https://api.jikan.moe/v4/anime?genres=${id}&type=tv&order_by=popularity&page=${page}&limit=20`,
     );
-    return response.data
+    return response.data;
   } catch (err) {
     console.log(err);
     return [];
